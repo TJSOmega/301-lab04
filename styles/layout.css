@@ -1,0 +1,89 @@
+body {
+  width: 480px;
+  margin: auto;
+}
+
+#a {
+  grid-area: header;
+}
+#b {
+  grid-area: aside;
+}
+#c {
+  grid-area: C
+}
+#d {
+  grid-area: D
+}
+#e {
+  grid-area: E;
+}
+#f {
+  grid-area: F;
+}
+#g {
+  grid-area: G ;
+}
+#h {
+  grid-area: H;
+}
+#i {
+  grid-area: I;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 240px 240px;
+  grid-template-rows: 75px 150px 125px 125px 250px 250px 80px;
+  
+
+grid-template-areas:
+  "header header"
+  "aside aside"
+  "C C"
+  "D D"
+  "E F"
+  "G H"
+  "I I"
+
+}
+
+div, aside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  body {
+    width: 720px;
+    margin: auto;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    grid-template-rows: 100px 175px 150px 150px 275px 275px 105px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  
+
+  main {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 200px 190px 190px 190px 190px;
+    grid-template-rows: 100px 200px 250px 150px;
+
+    grid-template-areas:
+      "header header header header header"
+      "aside C C D D"
+      "aside E F G H"
+      "aside I I I I"
+}
